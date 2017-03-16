@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "org.danilopianini:build-commons:${buildCommonsVersion}"
+        classpath "org.danilopianini:javadoc.io-linker:${javadocIOLinkerVersion}"
+        classpath "org.xtext:xtext-gradle-plugin:${xtendPluginVersion}"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'org.danilopianini.build-commons'
+apply plugin: "org.xtext.xtend"
+
+dependencies {
+    compile "org.eclipse.xtend:org.eclipse.xtend.lib:${xtendLibVersion}"
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+apply plugin: 'org.danilopianini.javadoc.io-linker'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.project {
+                developers {
+                    developer {
+                        name 'Danilo Pianini'
+                        email 'danilo.pianini@gmail.com'
+                        url 'http://www.danilopianini.org'
+                    }
+                    developer {
+                        name 'Roberto Casadei'
+                    }
+                }
+            }
+        }
+    }
+}
+
+eclipse.classpath.file {
+    whenMerged { classpath ->
+        classpath.entries = classpath.entries.findAll { entry ->
+            !entry.path.contains('build/')
+        }
+    }
+}
