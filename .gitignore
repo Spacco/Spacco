@@ -1,0 +1,6 @@
+version.info
+build/
+.directory
+.DS_Store/
+build/
+.gradle/
