@@ -1,6 +1,7 @@
-version.info
-build/
 .directory
+version.info
 .DS_Store/
-build/
 .gradle/
+build/
+/bin/
+/src/main/xtend-gen/
