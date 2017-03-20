@@ -1,4 +1,4 @@
-package it.unibo.caterva.core
+package it.unibo.caterva.core.impl
 
 import com.google.common.collect.ImmutableTable
 import com.google.common.collect.Table
@@ -8,6 +8,11 @@ import java.util.LinkedHashMap
 import java.util.Map
 import java.util.Set
 import java.util.Objects
+import it.unibo.caterva.core.AggregateSupport
+import it.unibo.caterva.core.Device
+import it.unibo.caterva.core.Comm
+import it.unibo.caterva.core.CodePoint
+import it.unibo.caterva.core.Field
 
 final class Context implements AggregateSupport {
 
@@ -37,7 +42,8 @@ final class Context implements AggregateSupport {
 	override  <K> Field<K> neighbor(K x) {
 		val cp = new CodePoint(0)
 		if(nbrs.put(cp, x) !== null) {
-			throw new IllegalStateException('''Aligned cancellation at «cp»: make sure you have not aligned twice on the same object at the same point in code''')
+			throw new IllegalStateException('''Aligned cancellation at «cp
+				»: make sure you have not aligned twice on the same object at the same point in code''')
 		}
 		new Field(state.column(cp).filter[neighbors.contains($0)], device, x)
 	}
