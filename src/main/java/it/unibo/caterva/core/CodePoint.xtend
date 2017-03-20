@@ -1,9 +1,11 @@
+package it.unibo.caterva.core
+
 import java.util.List;
 
-class CodePoint {
+final class CodePoint {
     int hash
-    Object o
-    final List<StackTraceElement> stack
+    val Object o
+    val List<StackTraceElement> stack
 
     new(Object o) {
         stack = Thread.currentThread.stackTrace
@@ -12,14 +14,16 @@ class CodePoint {
 
     override hashCode() {
         if (hash == 0) {
-            hash = stack.get(0).hashCode
+            hash = (0 ..< Math.min(stack.size, 3))
+                .map[stack.get(it).hashCode]
+                .fold(o.hashCode, [$0.bitwiseXor($1)])
         }
         hash
     }
 
     override equals(Object o) {
         if (o instanceof CodePoint) {
-            return stack == o.stack && this.o == o.o
+            return this.o == o.o && stack == o.stack
         }
         false
     }

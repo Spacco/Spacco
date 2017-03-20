@@ -9,47 +9,63 @@ import java.util.Set
 import com.google.inject.Injector
 import com.google.inject.Guice
 import com.google.inject.Inject
+import com.google.common.collect.Maps
+import com.sun.istack.internal.NotNull
+import com.google.common.collect.Table
+import com.google.common.collect.Tables
+import com.google.common.collect.ImmutableTable
 
-final class Context implements AggregateProgram {
+final class Context implements AggregateSupport {
 
-	private final Device device
-	private final Comm comm
-	private final Set<Device> neighbors = new LinkedHashSet
-	private Map<CodePoint, Field<?>> nbrs
-	private Map<CodePoint, Object> reps
-	private Map<CodePoint, Object> newreps
+	val Device device
+	val Comm comm
+	var Set<Device> neighbors
+	val Map<CodePoint, Object> nbrs = new LinkedHashMap
+	var Map<CodePoint, Object> reps = new LinkedHashMap
+	var Map<CodePoint, Object> newreps = new LinkedHashMap
+	@NotNull var Table<Device, CodePoint, Object> state
 
 	@Inject
-	private new(Device d, Comm c) {
+	new(Device d, Comm c) {
 		this.device = d
 		comm = c
 	}
 
-	override synchronized <I, O> O restrictedOn(I x, (I)=>O fun) {
-//		fun.apply(
-//			ne
-//			x
-//		)
+	override <I, O> O restrictedOn(I x, (I)=>O fun) {
+		val oldneighs = neighbors
+		val cp = new CodePoint(x)
+		neighbors = state.column(cp).keySet.filter[neighbors.contains(it)].toSet
+		val res = fun.apply(x)
+		neighbors = oldneighs
+		res
 	}
 
-	override <K> Field<K> neighbor(K x) {
+	override  <K> Field<K> neighbor(K x) {
 		val cp = new CodePoint(0)
-//		comm.share(cp, x);
-//		nbrs.put
-		null
+		nbrs.put(cp, x)
+		new Field(state.column(cp).filter[neighbors.contains($0)], device, x)
 	}
 
-	// "init" e "complete"? Forse meglio avere una VM da alimentare con una lambda che prende in ingresso il contesto?
-
-	override <X> X stateful(X x, (X)=>X f) {
+	override <X> stateful(X x, (X)=>X f) {
 		val cp = new CodePoint(0)
 		val computed = f.apply((reps.get(cp) ?: x) as X)
 		newreps.put(cp, computed)
 		computed
 	}
 
-	override Device self() {
+	override self() {
 		device
 	}
+
+	override <X> cycle(() => X program) {
+		newreps.clear
+		state = ImmutableTable.copyOf(comm.state)
+		neighbors = state.rowKeySet
+		val res = program.apply()
+		reps = newreps
+		comm.shareState(Collections.unmodifiableMap(nbrs))
+		res
+	}
+
 }
 

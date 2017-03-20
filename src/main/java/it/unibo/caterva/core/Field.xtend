@@ -36,8 +36,8 @@ final class Field<K> {
         new Field(res, local, fun.apply(localVal, field.localVal))
     }
 
-    def <I, O> Field<O> map(I obj, (K, I)=> O fun) {
-        new Field(values.mapValues([fun.apply(it, obj)]), local, fun.apply(localVal, obj))
+    def <I, O> Field<O> map((K)=> O fun) {
+        new Field(values.mapValues([fun.apply(it)]), local, fun.apply(localVal))
     }
 
     def Optional<K> reduce((K, K) => K fun) {
