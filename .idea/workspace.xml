@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74d105a2-8448-4dda-999e-c78bfbaff077" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pmd.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Actuator.xtend" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_18_0.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Sensor.xtend" afterPath="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/spacco.iml" afterPath="$PROJECT_DIR$/.idea/modules/spacco.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/spacco_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/spacco_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/spacco_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/spacco_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xtextAutoBuilderState.xml" afterPath="$PROJECT_DIR$/.idea/xtextAutoBuilderState.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -28,8 +38,43 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="spacco" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="spacco" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="other" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
             <PATH>
               <PATH_ELEMENT>
                 <option name="myItemId" value="" />
@@ -47,41 +92,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name="Field.xtend" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Field.xtend">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="Optional.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/91a4d115400e904f22b03a78deb355e9ea803cd4/guava-19.0-sources.jar!/com/google/common/base/Optional.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1110">
+              <caret line="98" column="42" lean-forward="false" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
+              <folding>
+                <element signature="e#4369#4370#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Sensor.xtend" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Sensor.xtend">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <file leaf-file-name="Context.xtend" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Context.xtend">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistanceSensor.xtend" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/sensors/DistanceSensor.xtend">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StandardLib.xtend" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib/StandardLib.xtend">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Coord.xtend" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib/Coord.xtend">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Device.xtend" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Device.xtend">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comm.xtend" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Comm.xtend">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,9 +189,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Xtend Interface" />
+        <option value="Xtend Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>comm.share(cp, x); 		nbrs.put</find>
+      <find>//		comm.share(cp, x); //		nbrs.put</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -443,7 +548,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2978474626157" />
+        <entry key="$PROJECT_DIR$" value="2978727524918" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -645,16 +750,135 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Sensor.xtend" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/Actuator.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/Device.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/FieldMapImpl.xtend" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/gradle.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/Comm.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/CodePoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CodePoint.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/AggregateProgram.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/Context.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/DistanceSensor.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/distanceTo.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib/StandarLib.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/Field.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/AggregateProgram.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Actuator.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/DistanceSensor.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Comm.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Context.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Device.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Field.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/sensors/DistanceSensor.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib/StandardLib.xtend" />
+        <option value="$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib/Coord.xtend" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="3200" />
-    <option name="height" value="1730" />
+    <option name="x" value="1920" />
+    <option name="width" value="1920" />
+    <option name="height" value="1170" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CollectionsScala</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness &gt; Messages</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Performance</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Security</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability &gt; Icons</id>
+          </State>
+          <State>
+            <id>Android Lint for Kotlin</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Comparing CollectionsScala</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>Dependency issuesJava</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralScala</id>
+          </State>
+          <State>
+            <id>ImportsJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>Other CollectionsScala</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>Scala</id>
+          </State>
+          <State>
+            <id>Syntactic SimplificationScala</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -671,7 +895,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -708,12 +932,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+              <option name="myItemId" value="xtend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -726,34 +950,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/it/unibo/caterva/sensors" />
+      <recent name="$PROJECT_DIR$/src/main/java/it/unibo/caterva/core" />
+      <recent name="$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
   <component name="RunManager" selected="Groovy.build">
@@ -1042,7 +1264,7 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1489666414965" />
+    <option name="lastUpdateTimestamp" value="1489953818632" />
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -1064,12 +1286,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="3200" height="1730" extended-state="6" />
-    <editor active="true" />
+    <frame x="1920" y="0" width="1920" height="1170" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21456693" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16791044" sideWeight="0.5046875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1079,24 +1302,25 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16929133" sideWeight="0.4975" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21456693" sideWeight="0.4975" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.141875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21455224" sideWeight="0.49322918" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1984375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1721875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17083333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16884328" sideWeight="0.4953125" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1108,14 +1332,73 @@
   </component>
   <component name="XtextAutoBuilderState">
     <installedLanguages>xtend;xtext</installedLanguages>
-    <index>rO0ABXNyADtvcmcuZWNsaXBzZS54dGV4dC5yZXNvdXJjZS5pbXBsLkNodW5rZWRSZXNvdXJjZURlc2NyaXB0aW9uc4nX+GBmyGixDAAAeHB3MgAAAAMAC3NwYWNjb190ZXN0AAAAAAALc3BhY2NvX21haW4AAAAAAAZzcGFjY28AAAAAeA==</index>
-    <module2generated>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAALc3BhY2NvX3Rlc3RzcgAvb3JnLmVjbGlwc2UueHRleHQuYnVpbGQuU291cmNlMkdlbmVyYXRlZE1hcHBpbmdgwc1G7ZGGygwAAHhwdwQAAAAAeHQAC3NwYWNjb19tYWluc3EAfgADdwQAAAAAeHQABnNwYWNjb3NxAH4AA3cEAAAAAHh4</module2generated>
+    <index>rO0ABXNyADtvcmcuZWNsaXBzZS54dGV4dC5yZXNvdXJjZS5pbXBsLkNodW5rZWRSZXNvdXJjZURlc2NyaXB0aW9uc4nX+GBmyGixDAAAeHB3JgAAAAMAC3NwYWNjb190ZXN0AAAAAAALc3BhY2NvX21haW4AAAALc3IARm9yZy5lY2xpcHNlLnh0ZXh0LnJlc291cmNlLnBlcnNpc3RlbmNlLlNlcmlhbGl6YWJsZVJlc291cmNlRGVzY3JpcHRpb25kWk3ntvlU9wwAAHhwd3IAbGZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvY29yZS9GaWVsZC54dGVuZAAAAAFzcgBFb3JnLmVjbGlwc2UueHRleHQucmVzb3VyY2UucGVyc2lzdGVuY2UuU2VyaWFsaXphYmxlRU9iamVjdERlc2NyaXB0aW9uSGq/ZFkRxWoMAAB4cHezAG9maWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvRmllbGQueHRlbmQjLzEAQGh0dHA6Ly93d3cuZWNsaXBzZS5vcmcveHRleHQvY29tbW9uL0phdmFWTVR5cGVzIy8vSnZtR2VuZXJpY1R5cGVzcgATamF2YS51dGlsLkFycmF5TGlzdHiB0h2Zx2GdAwABSQAEc2l6ZXhwAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAAEY29yZXQABUZpZWxkeHNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAACdAADc2lndAAgNzIwNjZjNDg5MjZiZTMwNmJkM2MwMGNkZjFkMWUzYmF0AA50eXBlUGFyYW1ldGVyc3QAAzxLPnh4dwgAAAAAAAAAMHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QABnZhbHVlc3hzcQB+AAYAAAADdwQAAAADdAAEamF2YXQA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BAAAAAN0AARqYXZhdAACaW90AAxzZXJpYWxpemFibGV4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAR1dGlsdAALYWJzdHJhY3RtYXB4c3EAfgAGAAAABXcEAAAABXEAfgBHcQB+AEhxAH4ASXEAfgBKcQB+ABZ4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAR1dGlsdAAHaGFzaG1hcHhzcQB+AAYAAAADdwQAAAADcQB+ABRxAH4AFXQACGxvY2FsdmFseHNxAH4ABgAAAAR3BAAAAAR0AARqYXZhdAAEbGFuZ3QAB3JlZmxlY3R0ABBhbm5vdGF0ZWRlbGVtZW50eHNxAH4ABgAAAAZ3BAAAAAZ0AANvcmd0AAdlY2xpcHNldAAFeHRleHR0AAV4YmFzZXQAA2xpYnQACnByb2NlZHVyZXN4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AARsYW5ndAAJZXhjZXB0aW9ueHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QABWNsYXNzeHhzcQB+AAJ3cwBtZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL1NlbnNvci54dGVuZAAAAAFzcQB+AAR3tABwZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL1NlbnNvci54dGVuZCMvMQBAaHR0cDovL3d3dy5lY2xpcHNlLm9yZy94dGV4dC9jb21tb24vSmF2YVZNVHlwZXMjLy9Kdm1HZW5lcmljVHlwZXNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AAZTZW5zb3J4c3EAfgANP0AAAAAAAAx3CAAAABAAAAACcQB+AA90AB85MmYwMTBhZDg1MjE3MzM1YmI0NWEwOGQ5ZDk4MjU3dAAJaW50ZXJmYWNldAAEdHJ1ZXh4dwgAAAAAAAAAAHhzcQB+AAJ3dwBxZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9saWIvU3RhbmRhcmRMaWIueHRlbmQAAAABc3EAfgAEd7gAdGZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvbGliL1N0YW5kYXJkTGliLnh0ZW5kIy8xAEBodHRwOi8vd3d3LmVjbGlwc2Uub3JnL3h0ZXh0L2NvbW1vbi9KYXZhVk1UeXBlcyMvL0p2bUdlbmVyaWNUeXBlc3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAADbGlidAALU3RhbmRhcmRMaWJ4c3EAfgANP0AAAAAAAAx3CAAAABAAAAABcQB+AA90ACAzZWU2OWQ3N2QxZTlmNTQ5MGU3MDE3MjQ0ZThiYjkzM3h4dwgAAAAAAAAAEXNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QABnN0cmluZ3hzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAZvYmplY3R4c3EAfgAGAAAABXcEAAAABXQAA2NvbXQABmdvb2dsZXQABmNvbW1vbnQABGJhc2V0AAhvcHRpb25hbHhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAxjaGFyc2VxdWVuY2V4c3EAfgAGAAAAA3cEAAAAA3EAfgAUcQB+ABV0AARkYXRheHNxAH4ABgAAAAZ3BAAAAAZ0AANvcmd0AAdlY2xpcHNldAAFeHRleHR0AAV4YmFzZXQAA2xpYnQAE2Z1bmN0aW9ucyRmdW5jdGlvbjJ4c3EAfgAGAAAAAXcEAAAAAXQAAWt4c3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAADbGlidAAEZGF0YXhzcQB+AAYAAAAGdwQAAAAGcQB+AF1xAH4AXnEAfgBfcQB+AGBxAH4AYXQACmNvbXBhcmFibGV4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AARsYW5ndAAKY29tcGFyYWJsZXhzcQB+AAYAAAAGdwQAAAAGdAADb3JndAAHZWNsaXBzZXQABXh0ZXh0dAAFeGJhc2V0AANsaWJ0AAlmdW5jdGlvbnN4c3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAADbGlidAALc3RhbmRhcmRsaWJ4c3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAADbGlidAAKY29tcGFyYWJsZXhzcQB+AAYAAAAFdwQAAAAFdAADb3JndAAHZWNsaXBzZXQABXh0ZW5kdAADbGlidAAEZGF0YXhzcQB+AAYAAAAFdwQAAAAFdAACaXR0AAV1bmlib3QAB2NhdGVydmF0AARjb3JldAAFZmllbGR4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAJpb3QADHNlcmlhbGl6YWJsZXhzcQB+AAYAAAAGdwQAAAAGcQB+AF1xAH4AXnEAfgBfcQB+AGBxAH4AYXQABGRhdGF4eHNxAH4AAnd2AHBmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvQ29kZVBvaW50Lnh0ZW5kAAAAAXNxAH4ABHe3AHNmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvQ29kZVBvaW50Lnh0ZW5kIy8xAEBodHRwOi8vd3d3LmVjbGlwc2Uub3JnL3h0ZXh0L2NvbW1vbi9KYXZhVk1UeXBlcyMvL0p2bUdlbmVyaWNUeXBlc3EAfgAGAAAAAXcEAAAAAXQACUNvZGVQb2ludHhzcQB+AA0/QAAAAAAAAXcIAAAAAgAAAAF0AANzaWd0ACEtNGE4NTkyY2EwNGU5ZDQ5ODJlYWExYmYzNGI0Mzk3OTd4eHcIAAAAAAAAABdzcQB+AAYAAAAEdwQAAAAEdAAEamF2YXQABGxhbmd0AAdyZWZsZWN0dAAEdHlwZXhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAVzdGFja3hzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAZvYmplY3R4c3EAfgAGAAAABncEAAAABnQAA29yZ3QAB2VjbGlwc2V0AAV4dGV4dHQABXhiYXNldAADbGlidAAEaGFzaHhzcQB+AAYAAAAEdwQAAAAEdAAEamF2YXQABGxhbmd0AAdyZWZsZWN0dAASZ2VuZXJpY2RlY2xhcmF0aW9ueHNxAH4ABgAAAAZ3BAAAAAZxAH4BSXEAfgFKcQB+AUtxAH4BTHEAfgFNdAAGdGhyZWFkeHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QAEXN0YWNrdHJhY2VlbGVtZW50eHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QAE3N0YWNrdHJhY2VlbGVtZW50W114c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AARsYW5ndAAIaXRlcmFibGV4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AARsYW5ndAAIcnVubmFibGV4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAR1dGlsdAAKY29sbGVjdGlvbnhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABHV0aWx0AARsaXN0eHNxAH4ABgAAAAF3BAAAAAFxAH4BTnhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQAAmlvdAAMc2VyaWFsaXphYmxleHNxAH4ABgAAAAN3BAAAAANxAH4BQXEAfgFCcQB+AU54c3EAfgAGAAAAAXcEAAAAAXQACWNvZGVwb2ludHhzcQB+AAYAAAAGdwQAAAAGcQB+AUlxAH4BSnEAfgFLcQB+AUxxAH4BTXEAfgFDeHNxAH4ABgAAAAZ3BAAAAAZxAH4BSXEAfgFKcQB+AUtxAH4BTHEAfgFNdAAGb2JqZWN0eHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QABnRocmVhZHhzcQB+AAYAAAABdwQAAAABcQB+AUN4c3EAfgAGAAAABncEAAAABnEAfgFJcQB+AUpxAH4BS3EAfgFMcQB+AU10ABFzdGFja3RyYWNlZWxlbWVudHhzcQB+AAYAAAAEdwQAAAAEdAAEamF2YXQABGxhbmd0AAdyZWZsZWN0dAAQYW5ub3RhdGVkZWxlbWVudHhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAVjbGFzc3h4c3EAfgACd3EAa2ZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvY29yZS9Db21tLnh0ZW5kAAAAAXNxAH4ABHeyAG5maWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvQ29tbS54dGVuZCMvMQBAaHR0cDovL3d3dy5lY2xpcHNlLm9yZy94dGV4dC9jb21tb24vSmF2YVZNVHlwZXMjLy9Kdm1HZW5lcmljVHlwZXNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AARDb21teHNxAH4ADT9AAAAAAAADdwgAAAAEAAAAAnEAfgE5dAAgMTI4NzJhNjcyZGRjOGY1MTM2ZTVlNGVmMWE3YzQ5Mjl0AAlpbnRlcmZhY2V0AAR0cnVleHh3CAAAAAAAAAAJc3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAAEY29yZXQABm9iamVjdHhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAZvYmplY3R4c3EAfgAGAAAAAXcEAAAAAXQACWNvZGVwb2ludHhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABHV0aWx0AANtYXB4c3EAfgAGAAAABncEAAAABnEAfgFJcQB+AUpxAH4BS3EAfgFMcQB+AU10AAljb2RlcG9pbnR4c3EAfgAGAAAABXcEAAAABXEAfgGWcQB+AZdxAH4BmHEAfgGZdAAGZGV2aWNleHNxAH4ABgAAAAV3BAAAAAVxAH4BlnEAfgGXcQB+AZhxAH4BmXQACWNvZGVwb2ludHhzcQB+AAYAAAADdwQAAAADcQB+AUFxAH4BQnQACWNvZGVwb2ludHhzcQB+AAYAAAAGdwQAAAAGcQB+AUlxAH4BSnEAfgFLcQB+AUxxAH4BTXQABm9iamVjdHh4c3EAfgACd3UAb2ZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvY29yZS9BY3R1YXRvci54dGVuZAAAAAFzcQB+AAR3tgByZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL0FjdHVhdG9yLnh0ZW5kIy8xAEBodHRwOi8vd3d3LmVjbGlwc2Uub3JnL3h0ZXh0L2NvbW1vbi9KYXZhVk1UeXBlcyMvL0p2bUdlbmVyaWNUeXBlc3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAAEY29yZXQACEFjdHVhdG9yeHNxAH4ADT9AAAAAAAAMdwgAAAAQAAAAAnEAfgAPdAAhLTEzZjMwMTEwYmI5ZjYzY2YxNDQwYzQyYTA5MGYyMDQzcQB+ANpxAH4A23h4dwgAAAAAAAAAAHhzcQB+AAJ3cwBtZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL0RldmljZS54dGVuZAAAAAFzcQB+AAR3tABwZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL0RldmljZS54dGVuZCMvMQBAaHR0cDovL3d3dy5lY2xpcHNlLm9yZy94dGV4dC9jb21tb24vSmF2YVZNVHlwZXMjLy9Kdm1HZW5lcmljVHlwZXNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AAZEZXZpY2V4c3EAfgANP0AAAAAAAAx3CAAAABAAAAACcQB+AA90ACA3ODUwNTg5ZjhjNjA5YjJjZmY2ZWQ2OTA4OGRmNDRiZHEAfgDacQB+ANt4eHcIAAAAAAAAAAB4c3EAfgACd34AeGZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvc2Vuc29ycy9EaXN0YW5jZVNlbnNvci54dGVuZAAAAAFzcQB+AAR3vwB7ZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9zZW5zb3JzL0Rpc3RhbmNlU2Vuc29yLnh0ZW5kIy8xAEBodHRwOi8vd3d3LmVjbGlwc2Uub3JnL3h0ZXh0L2NvbW1vbi9KYXZhVk1UeXBlcyMvL0p2bUdlbmVyaWNUeXBlc3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAAHc2Vuc29yc3QADkRpc3RhbmNlU2Vuc29yeHNxAH4ADT9AAAAAAAAMdwgAAAAQAAAAAnEAfgAPdAAhLTY5YmQ4OWYzYzVkMGI5MmU5ZWI0ZDg4NDQwZTU4ZjlicQB+ANpxAH4A23h4dwgAAAAAAAAAAnNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QABm9iamVjdHhzcQB+AAYAAAAFdwQAAAAFdAACaXR0AAV1bmlib3QAB2NhdGVydmF0AARjb3JldAAFZmllbGR4eHNxAH4AAndxAGtmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2xpYi9Db29yZC54dGVuZAAAAAFzcQB+AAR3sgBuZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9saWIvQ29vcmQueHRlbmQjLzEAQGh0dHA6Ly93d3cuZWNsaXBzZS5vcmcveHRleHQvY29tbW9uL0phdmFWTVR5cGVzIy8vSnZtR2VuZXJpY1R5cGVzcQB+AAYA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AAZxAH4AXXEAfgBecQB+AF9xAH4AYHEAfgBhcQB+AeZ4c3EAfgAGAAAAA3cEAAAAA3EAfgAUcQB+ABV0ACtvcmckZWNsaXBzZSR4dGVuZCRsaWIkYW5ub3RhdGlvbnMkYWNjZXNzb3JzeHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QABm51bWJlcnhzcQB+AAYAAAAEdwQAAAAEdAAEamF2YXQABGxhbmd0AAdyZWZsZWN0dAAQYW5ub3RhdGVkZWxlbWVudHhzcQB+AAYAAAAFdwQAAAAFcQB+AeJxAH4B43EAfgHkcQB+AeV0ACpvcmckZWNsaXBzZSR4dGVuZCRsaWIkYW5ub3RhdGlvbnMkdG9zdHJpbmd4c3EAfgAGAAAAAXcEAAAAAXEAfgIJeHNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AAdjb250ZXh0eHNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQAA2xpYnQAC3N0YW5kYXJkbGlieHNxAH4ABgAAAAV3BAAAAAVxAH4B4nEAfgHjcQB+AeRxAH4B5XEAfgIWeHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QABWNsYXNzeHhzcQB+AAJ3fQB3ZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL0FnZ3JlZ2F0ZVByb2dyYW0ueHRlbmQAAAABc3EAfgAEd74AemZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvY29yZS9BZ2dyZWdhdGVQcm9ncmFtLnh0ZW5kIy8xAEBodHRwOi8vd3d3LmVjbGlwc2Uub3JnL3h0ZXh0L2NvbW1vbi9KYXZhVk1UeXBlcyMvL0p2bUdlbmVyaWNUeXBlc3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAAEY29yZXQAEEFnZ3JlZ2F0ZVByb2dyYW14c3EAfgANP0AAAAAAAAx3CAAAABAAAAACcQB+AA90ACAyNmYwYTc2YTFkYTQ4M2ZiYzBmN2QzYTYzZDhmODBlMnEAfgDacQB+ANt4eHcIAAAAAAAAAAlzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAZvYmplY3R4c3EAfgAGAAAABncEAAAABnQAA29yZ3QAB2VjbGlwc2V0AAV4dGV4dHQABXhiYXNldAADbGlidAATZnVuY3Rpb25zJGZ1bmN0aW9uMXhzcQB+AAYAAAAFdwQAAAAFdAACaXR0AAV1bmlib3QAB2NhdGVydmF0AARjb3JldAAGZGV2aWNleHNxAH4ABgAAAAF3BAAAAAF0AAF4eHNxAH4ABgAAAAF3BAAAAAF0AAFpeHNxAH4ABgAAAAF3BAAAAAF0AAFreHNxAH4ABgAAAAZ3BAAAAAZ0AANvcmd0AAdlY2xpcHNldAAFeHRleHR0AAV4YmFzZXQAA2xpYnQACWZ1bmN0aW9uc3hzcQB+AAYAAAABdwQAAAABdAABb3hzcQB+AAYAAAAFdwQAAAAFdAACaXR0AAV1bmlib3QAB2NhdGVydmF0AARjb3JldAAFZmllbGR4eHNxAH4AAnd0AG5maWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvQ29udGV4dC54dGVuZAAAAAFzcQB+AAR3tQBxZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL0NvbnRleHQueHRlbmQjLzEAQGh0dHA6Ly93d3cuZWNsaXBzZS5vcmcveHRleHQvY29tbW9uL0phdmFWTVR5cGVzIy8vSnZtR2VuZXJpY1R5cGVzcQB+AAYAAAAFdwQAAAAFdAACaXR0AAV1bmlib3QAB2NhdGVydmF0AARjb3JldAAHQ29udGV4dHhzcQB+AA0/QAAAAAAAAXcIAAAAAgAAAAFxAH4BOXQAIS0zZGZlZjdmYzM4ZDgyMDQ2OWYxNzFhOTU2MWUzZWVmNnh4dwgAAAAAAAAALXNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AARjb21teHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEbGFuZ3QACWNsb25lYWJsZXhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAZvYmplY3R4c3EAfgAGAAAABncEAAAABnQAA29yZ3QAB2VjbGlwc2V0AAV4dGV4dHQABXhiYXNldAADbGlidAATZnVuY3Rpb25zJGZ1bmN0aW9uMXhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABHV0aWx0AANtYXB4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAR1dGlsdAALY29sbGVjdGlvbnN4c3EAfgAGAAAAA3cEAAAAA3EAfgFBcQB+AUJ0AAljb2RlcG9pbnR4c3EAfgAGAAAAAXcEAAAAAXQAAWl4c3EAfgAGAAAAAXcEAAAAAXQAAWt4c3EAfgAGAAAAA3cEAAAAA3EAfgFBcQB+AUJ0AARyZXBzeHNxAH4ABgAAAAR3BAAAAAR0AANjb210AAZnb29nbGV0AAZpbmplY3R0AAhpbmplY3RvcnhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABGxhbmd0AAhpdGVyYWJsZXhzcQB+AAYAAAABdwQAAAABdAABb3hzcQB+AAYAAAAEdwQAAAAEdAADY29tdAAGZ29vZ2xldAAGaW5qZWN0dAAFZ3VpY2V4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAR1dGlsdAAKY29sbGVjdGlvbnhzcQB+AAYAAAADdwQAAAADcQB+AUFxAH4BQnQABmRldmljZXhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABHV0aWx0AARsaXN0eHNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AAZkZXZpY2V4c3EAfgAGAAAAAXcEAAAAAXQAAXh4c3EAfgAGAAAABncEAAAABnEAfgFJcQB+AUpxAH4BS3EAfgFMcQB+AU1xAH4C7XhzcQB+AAYAAAAGdwQAAAAGdAADb3JndAAHZWNsaXBzZXQABXh0ZXh0dAAFeGJhc2V0AANsaWJ0AAlmdW5jdGlvbnN4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAJpb3QADHNlcmlhbGl6YWJsZXhzcQB+AAYAAAAFdwQAAAAFdAACaXR0AAV1bmlib3QAB2NhdGVydmF0AARjb3JldAAFZmllbGR4c3EAfgAGAAAAAXcEAAAAAXEAfgLteHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEdXRpbHQADWxpbmtlZGhhc2hzZXR4c3EAfgAGAAAAAXcEAAAAAXEAfgLXeHNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AAZvYmplY3R4c3EAfgAGAAAABncEAAAABnEAfgFJcQB+AUpxAH4BS3EAfgFMcQB+AU1xAH4C13hzcQB+AAYAAAABdwQAAAABdAAJY29kZXBvaW50eHNxAH4ABgAAAAZ3BAAAAAZxAH4BSXEAfgFKcQB+AUtxAH4BTHEAfgFNdAAJY29kZXBvaW50eHNxAH4ABgAAAAV3BAAAAAVxAH4DE3EAfgMUcQB+AxVxAH4DFnQACWNvZGVwb2ludHhzcQB+AAYAAAAGdwQAAAAGcQB+AUlxAH4BSnEAfgFLcQB+AUxxAH4BTXQABm9iamVjdHhzcQB+AAYAAAADdwQAAAADdAAEamF2YXQABHV0aWx0AAthYnN0cmFjdHNldHhzcQB+AAYAAAAEdwQAAAAEdAADY29tdAAGZ29vZ2xldAAGaW5qZWN0dAAGaW5qZWN0eHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEdXRpbHQADWxpbmtlZGhhc2htYXB4c3EAfgAGAAAABXcEAAAABXQAAml0dAAFdW5pYm90AAdjYXRlcnZhdAAEY29yZXQAEGFnZ3JlZ2F0ZXByb2dyYW14c3EAfgAGAAAABXcEAAAABXEAfgMTcQB+AxRxAH4DFXEAfgMWdAAHbmV3cmVwc3hzcQB+AAYAAAADdwQAAAADcQB+AUFxAH4BQnEAfgM1eHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEdXRpbHQAEmFic3RyYWN0Y29sbGVjdGlvbnhzcQB+AAYAAAAGdwQAAAAGcQB+AUlxAH4BSnEAfgFLcQB+AUxxAH4BTXEAfgM1eHNxAH4ABgAAAAN3BAAAAAN0AARqYXZhdAAEdXRpbHQAB2hhc2hzZXR4c3EAfgAGAAAAA3cEAAAAA3QABGphdmF0AAR1dGlsdAADc2V0eHNxAH4ABgAAAAV3BAAAAAV0AAJpdHQABXVuaWJvdAAHY2F0ZXJ2YXQABGNvcmV0AAdjb250ZXh0eHNxAH4ABgAAAAF3BAAAAAFxAH4DNXhzcQB+AAYAAAAFdwQAAAAFcQB+AxNxAH4DFHEAfgMVcQB+AxZxAH4C13h4dwwABnNwYWNjbwAAAAB4</index>
+    <module2generated>rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAALc3BhY2NvX3Rlc3RzcgAvb3JnLmVjbGlwc2UueHRleHQuYnVpbGQuU291cmNlMkdlbmVyYXRlZE1hcHBpbmdgwc1G7ZGGygwAAHhwdwQAAAAAeHQAC3NwYWNjb19tYWluc3EAfgADegAABAAAAAALAGxmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvRmllbGQueHRlbmQAAAACAItmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2NvcmUvLkZpZWxkLmphdmEuX3RyYWNlAA5ERUZBVUxUX09VVFBVVACDZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL2J1aWxkL3h0ZW5kL21haW4vYnVpbGQveHRlbmQtZ2VuL21haW4vaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL0ZpZWxkLmphdmEADkRFRkFVTFRfT1VUUFVUAG1maWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvU2Vuc29yLnh0ZW5kAAAAAgCMZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL2J1aWxkL3h0ZW5kL21haW4vYnVpbGQveHRlbmQtZ2VuL21haW4vaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlLy5TZW5zb3IuamF2YS5fdHJhY2UADkRFRkFVTFRfT1VUUFVUAIRmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2NvcmUvU2Vuc29yLmphdmEADkRFRkFVTFRfT1VUUFVUAHFmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2xpYi9TdGFuZGFyZExpYi54dGVuZAAAAAIAkGZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwegAABABhY2NvL2J1aWxkL3h0ZW5kL21haW4vYnVpbGQveHRlbmQtZ2VuL21haW4vaXQvdW5pYm8vY2F0ZXJ2YS9saWIvLlN0YW5kYXJkTGliLmphdmEuX3RyYWNlAA5ERUZBVUxUX09VVFBVVACIZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL2J1aWxkL3h0ZW5kL21haW4vYnVpbGQveHRlbmQtZ2VuL21haW4vaXQvdW5pYm8vY2F0ZXJ2YS9saWIvU3RhbmRhcmRMaWIuamF2YQAOREVGQVVMVF9PVVRQVVQAcGZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvY29yZS9Db2RlUG9pbnQueHRlbmQAAAACAHlmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi8uQ29kZVBvaW50LmphdmEuX3RyYWNlAA5ERUZBVUxUX09VVFBVVABxZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL2J1aWxkL3h0ZW5kL21haW4vYnVpbGQveHRlbmQtZ2VuL21haW4vQ29kZVBvaW50LmphdmEADkRFRkFVTFRfT1VUUFVUAGtmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvQ29tbS54dGVuZAAAAAIAimZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9idWlsZC94dGVuZC9tYWluL2J1aWxkL3h0ZW5kLWdlbi9tYWluL2l0L3VuaWJvL2NhdGVydmEvY29yZS8uQ29tbS5qYXZhLl90cmFjZQAOREVGQVVMVF9PVVRQVVQAgmZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9idWlsZC94dGVuZC9tYWluL2J1aWxkL3h0ZW5kLWdlbi9tYWluL2l0L3VuaWJvegAABAAvY2F0ZXJ2YS9jb3JlL0NvbW0uamF2YQAOREVGQVVMVF9PVVRQVVQAb2ZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvY29yZS9BY3R1YXRvci54dGVuZAAAAAIAjmZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9idWlsZC94dGVuZC9tYWluL2J1aWxkL3h0ZW5kLWdlbi9tYWluL2l0L3VuaWJvL2NhdGVydmEvY29yZS8uQWN0dWF0b3IuamF2YS5fdHJhY2UADkRFRkFVTFRfT1VUUFVUAIZmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2NvcmUvQWN0dWF0b3IuamF2YQAOREVGQVVMVF9PVVRQVVQAbWZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvY29yZS9EZXZpY2UueHRlbmQAAAACAIRmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2NvcmUvRGV2aWNlLmphdmEADkRFRkFVTFRfT1VUUFVUAIxmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2NvcmUvLkRldmljZS5qYXZhLl90cmFjZQAOREVGQVVMVF9PVVRQVVQAeGZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9zcmMvbWFpbi9qYXZhL2l0L3VuaWJvL2NhdGVydmEvc2Vuc29ycy9EaXN0YW5jZVNlbnNvci54dGVuZAAAAAIAl2ZpbGU6egAABAAvLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL2J1aWxkL3h0ZW5kL21haW4vYnVpbGQveHRlbmQtZ2VuL21haW4vaXQvdW5pYm8vY2F0ZXJ2YS9zZW5zb3JzLy5EaXN0YW5jZVNlbnNvci5qYXZhLl90cmFjZQAOREVGQVVMVF9PVVRQVVQAj2ZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9idWlsZC94dGVuZC9tYWluL2J1aWxkL3h0ZW5kLWdlbi9tYWluL2l0L3VuaWJvL2NhdGVydmEvc2Vuc29ycy9EaXN0YW5jZVNlbnNvci5qYXZhAA5ERUZBVUxUX09VVFBVVABrZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9saWIvQ29vcmQueHRlbmQAAAACAIpmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2xpYi8uQ29vcmQuamF2YS5fdHJhY2UADkRFRkFVTFRfT1VUUFVUAIJmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2xpYi9Db29yZC5qYXZhAA5ERUZBVUxUX09VVFBVVAB3ZmlsZTovLy9ob21lL2Rhbnlzay9Ecm9wYm94L1dvcmtzcGFjZXMvU2luZ2xlUHJvamVjdHMvc3BhY2NvL3NyYy9tYWluL2phdmEvaXQvdW5pYm8vY2F0ZXJ2YS9jb3JlL0FnZ3JlZ2F0ZVByb2dyYW0ueHRlbmQAAAACAJZmaWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vYnVpbGQveHRlbmQvbWFpbi9idWlsZC94dGVuZC1nZW4vbWFpbi9pdC91bmliby9jYXRlcnZhL2NvcmUvLkFnZ3JlZ2F0ZVByb2dyYW0uamF2YS5fdHJhY2UADkRFRkFVegAAAlNMVF9PVVRQVVQAjmZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9idWlsZC94dGVuZC9tYWluL2J1aWxkL3h0ZW5kLWdlbi9tYWluL2l0L3VuaWJvL2NhdGVydmEvY29yZS9BZ2dyZWdhdGVQcm9ncmFtLmphdmEADkRFRkFVTFRfT1VUUFVUAG5maWxlOi8vL2hvbWUvZGFueXNrL0Ryb3Bib3gvV29ya3NwYWNlcy9TaW5nbGVQcm9qZWN0cy9zcGFjY28vc3JjL21haW4vamF2YS9pdC91bmliby9jYXRlcnZhL2NvcmUvQ29udGV4dC54dGVuZAAAAAIAjWZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9idWlsZC94dGVuZC9tYWluL2J1aWxkL3h0ZW5kLWdlbi9tYWluL2l0L3VuaWJvL2NhdGVydmEvY29yZS8uQ29udGV4dC5qYXZhLl90cmFjZQAOREVGQVVMVF9PVVRQVVQAhWZpbGU6Ly8vaG9tZS9kYW55c2svRHJvcGJveC9Xb3Jrc3BhY2VzL1NpbmdsZVByb2plY3RzL3NwYWNjby9idWlsZC94dGVuZC9tYWluL2J1aWxkL3h0ZW5kLWdlbi9tYWluL2l0L3VuaWJvL2NhdGVydmEvY29yZS9Db250ZXh0LmphdmEADkRFRkFVTFRfT1VUUFVUeHQABnNwYWNjb3NxAH4AA3cEAAAAAHh4</module2generated>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Actuator.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Actuator.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1128,7 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,7 +1422,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sensor.xtend">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1152,7 +1434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,7 +1445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sensor.xtend">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1176,7 +1457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,7 +1468,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sensor.xtend">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1200,7 +1480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,34 +1515,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="174">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/FieldMapImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Field.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sensor.xtend">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.xtext/org.eclipse.xtext.xbase.lib/2.11.0/16f37b75de3488f4f42899ce47b851ded840df95/org.eclipse.xtext.xbase.lib-2.11.0-sources.jar!/org/eclipse/xtext/xbase/lib/MapExtensions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="699">
+          <caret line="108" column="41" lean-forward="false" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/ad97fe8faaf01a3d3faacecd58e8fa6e78a973ca/guava-18.0-sources.jar!/com/google/common/base/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1695">
+          <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="696">
+          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="783">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CodePoint.java" />
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/CodePoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/CodePoint.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/91a4d115400e904f22b03a78deb355e9ea803cd4/guava-19.0-sources.jar!/com/google/common/base/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="98" column="42" lean-forward="false" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
+          <folding>
+            <element signature="e#4369#4370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/distanceTo.java" />
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1653">
+          <caret line="63" column="2" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/it/unibo/caterva/lib/StandardLib.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Actuator.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1246">
+          <caret line="877" column="22" lean-forward="false" selection-start-line="877" selection-start-column="22" selection-end-line="877" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/AggregateProgram.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/it/unibo/caterva/lib/distanceTo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Comm.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Device.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Field.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/xtend/main/build/xtend-gen/main/Sensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib/StandardLib.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Sensor.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/core/Context.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/sensors/DistanceSensor.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/unibo/caterva/lib/Coord.xtend">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1288,7 +1715,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Java-Gradle</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1335,6 +1762,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Gradle: com.google.guava:guava:18.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
