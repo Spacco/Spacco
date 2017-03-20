@@ -1,19 +1,13 @@
 package it.unibo.caterva.core
 
+import com.google.common.collect.ImmutableTable
+import com.google.common.collect.Table
+import com.google.inject.Inject
 import java.util.Collections
 import java.util.LinkedHashMap
-import java.util.LinkedHashSet
-import java.util.List
 import java.util.Map
 import java.util.Set
-import com.google.inject.Injector
-import com.google.inject.Guice
-import com.google.inject.Inject
-import com.google.common.collect.Maps
-import com.sun.istack.internal.NotNull
-import com.google.common.collect.Table
-import com.google.common.collect.Tables
-import com.google.common.collect.ImmutableTable
+import java.util.Objects
 
 final class Context implements AggregateSupport {
 
@@ -23,7 +17,7 @@ final class Context implements AggregateSupport {
 	val Map<CodePoint, Object> nbrs = new LinkedHashMap
 	var Map<CodePoint, Object> reps = new LinkedHashMap
 	var Map<CodePoint, Object> newreps = new LinkedHashMap
-	@NotNull var Table<Device, CodePoint, Object> state
+	var Table<Device, CodePoint, Object> state
 
 	@Inject
 	new(Device d, Comm c) {
@@ -42,7 +36,9 @@ final class Context implements AggregateSupport {
 
 	override  <K> Field<K> neighbor(K x) {
 		val cp = new CodePoint(0)
-		nbrs.put(cp, x)
+		if(nbrs.put(cp, x) !== null) {
+			throw new IllegalStateException('''Aligned cancellation at «cp»: make sure you have not aligned twice on the same object at the same point in code''')
+		}
 		new Field(state.column(cp).filter[neighbors.contains($0)], device, x)
 	}
 
@@ -60,7 +56,9 @@ final class Context implements AggregateSupport {
 	override <X> cycle(() => X program) {
 		newreps.clear
 		state = ImmutableTable.copyOf(comm.state)
-		neighbors = state.rowKeySet
+		neighbors = Objects.requireNonNull(state.rowKeySet)
+			.filter[!device.equals(it)]
+			.toSet
 		val res = program.apply()
 		reps = newreps
 		comm.shareState(Collections.unmodifiableMap(nbrs))

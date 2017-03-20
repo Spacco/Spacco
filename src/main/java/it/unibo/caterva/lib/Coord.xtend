@@ -1,16 +1,15 @@
 package it.unibo.caterva.lib
 
-import org.eclipse.xtend.lib.annotations.Data
+import com.google.common.collect.ImmutableTable
+import it.unibo.caterva.core.CodePoint
+import it.unibo.caterva.core.Comm
 import it.unibo.caterva.core.Context
 import it.unibo.caterva.core.Device
-import it.unibo.caterva.core.Comm
 import it.unibo.caterva.sensors.DistanceSensor
-import java.util.Map
-import it.unibo.caterva.core.CodePoint
-import java.util.Collections
-import com.google.common.collect.ImmutableTable
-import it.unibo.caterva.sensors.impl.EuclideanDistanceSensor
 import it.unibo.caterva.sensors.PositionSensor
+import it.unibo.caterva.sensors.impl.EuclideanDistanceSensor
+import java.util.Map
+import org.eclipse.xtend.lib.annotations.Data
 
 @Data class Coord {
 
@@ -39,13 +38,13 @@ import it.unibo.caterva.sensors.PositionSensor
         }
         val ctx = new Context(device, comm)
         val stdlib = new StandardLib
-        val possense = new PositionSensor() {
+        val possense = new PositionSensor<Double>() {
             override getCoordinates() {
-                return #[0, 1, 2]
+                return #[0d, 1d, 2d]
             }
         }
         val sense = new EuclideanDistanceSensor(ctx, possense)
-        new Coord(ctx, stdlib, sense).distanceTo(true)
+        ctx.cycle[new Coord(ctx, stdlib, sense).distanceTo(true)]
     }
 
 }

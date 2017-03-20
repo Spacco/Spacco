@@ -27,5 +27,9 @@ final class CodePoint {
         }
         false
     }
+    
+	override toString() {
+		'''«o.toString»->«stack.join("->",[it.fileName.replaceAll('\\.java', ''':«it.lineNumber»''')])»'''
+	}
 
 }

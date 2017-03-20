@@ -1,18 +1,17 @@
 package it.unibo.caterva.sensors.impl
 
-import it.unibo.caterva.sensors.DistanceSensor
-import org.eclipse.xtend.lib.annotations.Data
-import it.unibo.caterva.sensors.PositionSensor
 import it.unibo.caterva.core.Context
-import java.util.List
+import it.unibo.caterva.sensors.DistanceSensor
+import it.unibo.caterva.sensors.PositionSensor
+import org.eclipse.xtend.lib.annotations.Data
 
 @Data class EuclideanDistanceSensor implements DistanceSensor {
 
     val Context ctx
-    val PositionSensor psense
+    val PositionSensor<?> psense
 
     override neighborRange() {
-        val List<Number> local = psense.coordinates
+        val local = psense.coordinates
         ctx.neighbor(local)
             .map[neighPos | Math.sqrt(
                 (0 ..< local.size)
