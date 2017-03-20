@@ -9,23 +9,23 @@ import java.util.Map
 import java.util.Set
 import java.util.Objects
 import it.unibo.caterva.core.AggregateSupport
-import it.unibo.caterva.core.Device
 import it.unibo.caterva.core.Comm
 import it.unibo.caterva.core.CodePoint
 import it.unibo.caterva.core.Field
+import it.unibo.caterva.core.DeviceUID
 
 final class Context implements AggregateSupport {
 
-	val Device device
+	val DeviceUID device
 	val Comm comm
-	var Set<Device> neighbors
+	var Set<DeviceUID> neighbors
 	val Map<CodePoint, Object> nbrs = new LinkedHashMap
 	var Map<CodePoint, Object> reps = new LinkedHashMap
 	var Map<CodePoint, Object> newreps = new LinkedHashMap
-	var Table<Device, CodePoint, Object> state
+	var Table<DeviceUID, CodePoint, Object> state
 
 	@Inject
-	new(Device d, Comm c) {
+	new(DeviceUID d, Comm c) {
 		this.device = d
 		comm = c
 	}

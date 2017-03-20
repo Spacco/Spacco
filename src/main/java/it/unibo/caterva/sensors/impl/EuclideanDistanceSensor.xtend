@@ -1,14 +1,14 @@
 package it.unibo.caterva.sensors.impl
 
-import it.unibo.caterva.core.Context
 import it.unibo.caterva.sensors.DistanceSensor
 import it.unibo.caterva.sensors.PositionSensor
 import org.eclipse.xtend.lib.annotations.Data
 import com.google.inject.Inject
+import it.unibo.caterva.core.AggregateSupport
 
 @Data class EuclideanDistanceSensor implements DistanceSensor {
 
-    @Inject val Context ctx
+    @Inject val AggregateSupport ctx
     val PositionSensor<?> psense
     
     override neighborRange() {

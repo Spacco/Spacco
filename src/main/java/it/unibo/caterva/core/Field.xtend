@@ -7,11 +7,11 @@ import com.google.common.base.Optional
 
 final class Field<K> {
 
-	val Map<Device, K> values
-	val Device local;
+	val Map<DeviceUID, K> values
+	val DeviceUID local;
 	val K localVal;
 
-	new(Map<Device, K> repr, Device device, K localVal) {
+	new(Map<DeviceUID, K> repr, DeviceUID device, K localVal) {
 		values = Collections.unmodifiableMap(repr)
 		local = device
 		this.localVal = localVal
