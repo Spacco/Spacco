@@ -1,6 +1,7 @@
 package it.unibo.caterva.lib
 
 import it.unibo.caterva.core.Field
+import org.eclipse.xtend.lib.annotations.Data
 
 @Data class StandardLib {
 
