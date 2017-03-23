@@ -95,6 +95,7 @@ final class Context implements AggregateSupport {
 		neighbors = Objects.requireNonNull(state.rowKeySet)
 			.filter[!device.equals(it)]
 			.toSet
+		nbrs.clear
 		val res = program.apply()
 		stack.refresh
 		reps = newreps

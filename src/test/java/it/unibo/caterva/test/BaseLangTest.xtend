@@ -19,7 +19,7 @@ class BaseLangTest {
 			Assert.assertNotNull(toTest.program)
 			(1..1000000).forEach[
 				val res = toTest.apply
-				println(res)
+//				println(res)
 				Assert.assertEquals('''Failure for «test» at cycle «it»''',toTest.program.getExpectedResult(it), res)
 			]
 		]
