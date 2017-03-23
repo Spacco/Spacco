@@ -17,6 +17,7 @@ import it.unibo.caterva.lib.Standard
 import it.unibo.caterva.lib.Alignment
 import org.apache.commons.math3.random.RandomGenerator
 import it.unimi.dsi.util.XoRoShiRo128PlusRandomGenerator
+import it.unibo.caterva.core.Environment
 
 final class AggregateProgramFactory {
 	def static <P extends Function0<X>, X, A> AggregateProgram<P, X> createProgram(
@@ -40,6 +41,7 @@ final class AggregateProgramFactory {
 			bindIfAbsent.apply(typeof(Time), typeof(Time))
 			bindIfAbsent.apply(typeof(CodePointGenerator), typeof(SimpleStack))
 			bindIfAbsent.apply(typeof(Alignment), typeof(Alignment))
+			bindIfAbsent.apply(typeof(Environment), typeof(MapBackedEnvironment))
 			if (!bindings.containsKey(typeof(RandomGenerator))) {
 				bind(typeof(RandomGenerator)).to(typeof(XoRoShiRo128PlusRandomGenerator))
 			}
