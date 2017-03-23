@@ -43,10 +43,13 @@ final class Context implements AggregateSupport {
 		val oldneighs = neighbors
 		val cp = stack.enterContext(x)
 		neighbors = state.column(cp).keySet.filter[neighbors.contains(it)].toSet
-		val res = fun.apply(x)
-		stack.exitContext
-		neighbors = oldneighs
-		res
+		try {
+			val res = fun.apply(x)
+			res
+		} finally {
+			stack.exitContext
+			neighbors = oldneighs
+		}
 	}
 
 	override  <K> Field<K> neighbor(K x) {
@@ -61,13 +64,16 @@ final class Context implements AggregateSupport {
 
 	override <X> stateful(X x, (X)=>X f) {
 		val cp = stack.enterContext(typeof(RepToken))
-		val computed = f.apply((reps.get(cp) ?: x) as X)
-		if (newreps.put(cp, computed) !== null) {
-			throw new IllegalStateException('''State cancellation at «cp
-				»: make sure you have not aligned twice on the same object at the same point in code''')
+		try {
+			val computed = f.apply((reps.get(cp) ?: x) as X)
+			if (newreps.put(cp, computed) !== null) {
+				throw new IllegalStateException('''State cancellation at «cp
+					»: make sure you have not aligned twice on the same object at the same point in code''')
+			}
+			computed
+		} finally {
+			stack.exitContext
 		}
-		stack.exitContext
-		computed
 	}
 
 	override self() {
