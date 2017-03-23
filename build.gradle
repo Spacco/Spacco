@@ -21,6 +21,7 @@ apply plugin: "org.xtext.xtend"
 dependencies {
     compile "com.google.inject:guice:${guiceVersion}"
     compile "net.sf.trove4j:trove4j:${troveVersion}"
+    compile "org.apache.commons:commons-math3:${math3Version}"
     compile "org.eclipse.xtend:org.eclipse.xtend.lib:${xtendLibVersion}"
     testCompile "junit:junit:${junitVersion}"
     testCompile "org.reflections:reflections:${reflectionsVersion}"
