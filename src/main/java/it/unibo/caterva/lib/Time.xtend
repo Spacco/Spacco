@@ -10,7 +10,7 @@ import static it.unibo.caterva.lib.Standard.*
 	val AggregateSupport fc
 	
 	def <V extends Comparable<V>> V T(V initial, V zero, (V)=>V decay) {
-		fc.stateful([initial], [min(initial, max(zero, decay.apply(it)))])
+		fc.stateful(initial, [min(initial, max(zero, decay.apply(it)))])
 	}
 	
 }

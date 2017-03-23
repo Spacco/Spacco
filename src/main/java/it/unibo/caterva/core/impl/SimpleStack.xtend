@@ -24,7 +24,6 @@ class SimpleStack implements CodePointGenerator {
 	}
 
 	final override refresh() {
-		println("=============================")
 		if (!stack.isEmpty) {
 			throw new IllegalStateException("The computation concluded but the call stack is not empty. This is likely a bug")
 		}
@@ -34,12 +33,10 @@ class SimpleStack implements CodePointGenerator {
 	
 	override enterContext(Object alignOn) {
 		stack.push(new StackFrame(rng.nextLong, seq++, alignOn))
-		println('''Entered in «stack.peek»''')
 		new SimpleCodePoint(stack)
 	}
 	
 	override exitContext() {
-		println('''Returned from «stack.peek»''')
 		stack.pop
 	}
 	

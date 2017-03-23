@@ -71,10 +71,10 @@ final class Context implements AggregateSupport {
 		new Field(state.column(cp).filter[neighbors.contains($0)], device, x)
 	}
 
-	override <X> stateful(=>X x, (X)=>X f) {
+	override <X> stateful(X x, (X)=>X f) {
 		val cp = stack.enterContext(new RepToken(f.class))
 		try {
-			val computed = f.apply((reps.get(cp) ?: x.apply) as X)
+			val computed = f.apply((reps.get(cp) ?: x) as X)
 			if (newreps.put(cp, computed) !== null) {
 				throw new IllegalStateException('''State cancellation at «cp
 					»: make sure you have not aligned twice on the same object at the same point in code''')
