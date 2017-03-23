@@ -16,12 +16,21 @@ import com.google.inject.Singleton
 import com.google.common.collect.Maps
 import it.unibo.caterva.core.CodePointGenerator
 import it.unibo.caterva.core.CodePoint
+import org.eclipse.xtend.lib.annotations.Data
 
 @Singleton
 final class Context implements AggregateSupport {
 	
-	private static class RepToken {}
-	private static class NbrToken {}
+	@Data private static class RepToken {
+		val Class<?> funtype
+		override toString() {"REP_" + funtype.name.substring(funtype.name.lastIndexOf(".") + 1)}
+	}
+	private static class NbrToken {
+		static val SINGLETON = new NbrToken
+		override equals(Object o) { o instanceof NbrToken }
+		override hashCode() { 0 }
+		override toString() { 'nbr' }
+	}
 	
 	val DeviceUID device
 	val Comm comm
@@ -53,7 +62,7 @@ final class Context implements AggregateSupport {
 	}
 
 	override  <K> Field<K> neighbor(K x) {
-		val cp = stack.enterContext(typeof(NbrToken))
+		val cp = stack.enterContext(NbrToken.SINGLETON)
 		if(nbrs.put(cp, x) !== null) {
 			throw new IllegalStateException('''Aligned cancellation at «cp
 				»: make sure you have not aligned twice on the same object at the same point in code''')
@@ -62,10 +71,10 @@ final class Context implements AggregateSupport {
 		new Field(state.column(cp).filter[neighbors.contains($0)], device, x)
 	}
 
-	override <X> stateful(X x, (X)=>X f) {
-		val cp = stack.enterContext(typeof(RepToken))
+	override <X> stateful(=>X x, (X)=>X f) {
+		val cp = stack.enterContext(new RepToken(f.class))
 		try {
-			val computed = f.apply((reps.get(cp) ?: x) as X)
+			val computed = f.apply((reps.get(cp) ?: x.apply) as X)
 			if (newreps.put(cp, computed) !== null) {
 				throw new IllegalStateException('''State cancellation at «cp
 					»: make sure you have not aligned twice on the same object at the same point in code''')

@@ -20,8 +20,8 @@ class RepErasure extends AbstractTest<Integer> {
 	}
 	
 	override apply() {
-		val ()=>Integer fun = [fc.stateful(0, [it + 1])]
-		align.branch(fc.stateful(-1, [it + 1]) % 4 < 2, fun, fun)
+		val ()=>Integer fun = [fc.stateful([0], [it + 1])]
+		align.branch(fc.stateful([-1], [it + 1]) % 4 < 2, fun, fun)
 	}
 	
 }

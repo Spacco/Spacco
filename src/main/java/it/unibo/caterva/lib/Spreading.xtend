@@ -11,7 +11,7 @@ import static it.unibo.caterva.lib.Standard.*
     val DistanceSensor ds
 
     def distanceTo(boolean source) {
-        context.stateful(Double.POSITIVE_INFINITY, [
+        context.stateful([Double.POSITIVE_INFINITY], [
             val distances = context.neighbor(it)
                 .map(ds.neighborRange, [$0 + $1])
             val minDist = minHood(distances, Double.POSITIVE_INFINITY)

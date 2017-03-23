@@ -5,23 +5,41 @@ import it.unibo.caterva.core.CodePointGenerator
 import java.util.Arrays
 import java.util.Deque
 import java.util.LinkedList
+import org.apache.commons.math3.random.RandomGenerator
+import com.google.inject.Inject
+import org.eclipse.xtend.lib.annotations.Data
 
 class SimpleStack implements CodePointGenerator {
 
-	val Deque<Object> stack = new LinkedList
+	static val SEED = 0x7f150540ed056752#L
+	static val SEQSTART = 0
+	val Deque<StackFrame> stack = new LinkedList
+	val RandomGenerator rng
+	var int seq
 
-	override refresh() {
+	@Inject
+	new(RandomGenerator rng) {
+		this.rng = rng
+		refresh
+	}
+
+	final override refresh() {
+		println("=============================")
 		if (!stack.isEmpty) {
-			throw new IllegalStateException
+			throw new IllegalStateException("The computation concluded but the call stack is not empty. This is likely a bug")
 		}
+		rng.seed = SEED
+		seq = SEQSTART
 	}
 	
 	override enterContext(Object alignOn) {
-		stack.push(alignOn)
+		stack.push(new StackFrame(rng.nextLong, seq++, alignOn))
+		println('''Entered in «stack.peek»''')
 		new SimpleCodePoint(stack)
 	}
 	
 	override exitContext() {
+		println('''Returned from «stack.peek»''')
 		stack.pop
 	}
 	
@@ -29,10 +47,27 @@ class SimpleStack implements CodePointGenerator {
 		stack.toString
 	}
 	
+	@Data private static class StackFrame {
+		val long hash
+		val int seq
+		val Object align
+
+		override toString() {
+			'''[«align.toString»@«seq»/«hash»]'''
+		}
+		override hashCode() {
+			hash as int
+		}
+	}
+	
 	private static class SimpleCodePoint implements CodePoint {
 		val Object[] repr
 		var int hash
-		new(Deque<Object> stack) {
+		new(Deque<StackFrame> stack) {
+			if (stack.size == 0) {
+				throw new IllegalStateException("Empty stacks are not allowed")
+			}
+			hash = stack.peek.hashCode
 			repr = stack.toArray
 		}
 		override equals(Object obj) {

@@ -21,7 +21,7 @@ class CyclicTimer extends AbstractTest<Boolean> {
 		cyclicTimer(10, 1)
 	}
 	def cyclicTimer(int length, int decay) {
-		fc.stateful(length, [
+		fc.stateful([length], [
 			if (it == 0) {
 				length
 			} else {

@@ -11,4 +11,8 @@ import it.unibo.caterva.core.AggregateSupport
     def <O> O branch(boolean b, ()=>O then, ()=>O otherwise) {
     	fc.restrictedOn(b, [(if (it) then else otherwise).apply()])
     }
+    def <I, O, K> forEach(Iterable<I> target, (I, int)=>K key, (I, int, K)=>Object fun) {
+    	target.forEach[v, i | fc.restrictedOn(key.apply(v, i), [fun.apply(v, i, it)])]
+    }
+    
 }
