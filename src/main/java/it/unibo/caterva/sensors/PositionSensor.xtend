@@ -2,8 +2,8 @@ package it.unibo.caterva.sensors
 
 import java.util.List
 
-interface PositionSensor<N extends Number> {
+interface PositionSensor {
 
-    def List<N> getCoordinates()
+    def List<Double> getCoordinates()
 
 }

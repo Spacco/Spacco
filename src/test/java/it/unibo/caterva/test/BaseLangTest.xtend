@@ -1,23 +1,23 @@
 package it.unibo.caterva.test
 
-import it.unibo.caterva.core.impl.AggregateProgramFactory
-import java.util.Collections
 import org.junit.Assert
 import org.junit.Test
 import org.reflections.Reflections
 import java.lang.reflect.Modifier
+import it.unibo.caterva.VM
 
 class BaseLangTest {
 	static val Iterable<Class<? extends TestWithResult>> TESTS =
-		new Reflections().getSubTypesOf(typeof(TestWithResult)).filter[!Modifier.isAbstract(it.modifiers)]
-
+		new Reflections(typeof(BaseLangTest).package)
+			.getSubTypesOf(typeof(TestWithResult))
+			.reject[Modifier.isAbstract(it.modifiers)]
 	@Test
 	def void test() {
 		TESTS.forEach[test |
-			val toTest = AggregateProgramFactory.createProgram(test, Collections.emptyMap)
+			val toTest = VM.Builder.withDefault.build.makeProgram(test)
 			Assert.assertNotNull(toTest)
 			Assert.assertNotNull(toTest.program)
-			(1..1000000).forEach[
+			(1..100).forEach[
 				val res = toTest.apply
 //				println(res)
 				Assert.assertEquals('''Failure for «test» at cycle «it»''',toTest.program.getExpectedResult(it), res)

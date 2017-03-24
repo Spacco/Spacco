@@ -2,9 +2,9 @@ package it.unibo.caterva.core.impl
 
 import java.util.List;
 import it.unibo.caterva.core.CodePoint
-import it.unibo.caterva.core.CodePointGenerator
+import it.unibo.caterva.core.Stack
 
-final class JavaStack implements CodePointGenerator {
+final class JavaStack implements Stack {
 	override refresh() { }
 	override enterContext(Object alignOn) {
 		new JavaStackCodePoint(alignOn)

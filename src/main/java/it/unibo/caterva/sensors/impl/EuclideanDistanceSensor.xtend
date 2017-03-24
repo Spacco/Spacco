@@ -8,8 +8,14 @@ import it.unibo.caterva.core.AggregateSupport
 
 @Data class EuclideanDistanceSensor implements DistanceSensor {
 
-    @Inject val AggregateSupport ctx
-    val PositionSensor<?> psense
+    val AggregateSupport ctx
+    val PositionSensor psense
+    
+    @Inject
+    new(AggregateSupport context, PositionSensor pos) {
+    	ctx = context
+    	psense = pos
+    }
     
     override neighborRange() {
         val local = psense.coordinates

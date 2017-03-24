@@ -1,9 +1,9 @@
 package it.unibo.caterva.core;
 
-public interface Environment<K, V> extends Sensor, Actuator {
+public interface Environment extends Sensor, Actuator {
     
-    V read(K name);
+    <V> V read(String name);
 
-    void write(K name, V value);
+    void write(String name, Object value);
 
 }

@@ -4,14 +4,14 @@ import it.unibo.caterva.core.Environment
 import java.util.Map
 import java.util.LinkedHashMap
 
-class MapBackedEnvironment<K, V> implements Environment<K, V> {
+class MapBackedEnvironment implements Environment {
 	
-	val Map<K,V> core = new LinkedHashMap
+	val Map<String, Object> core = new LinkedHashMap
 	
-	override read(K name) { core.get(name) }
+	override <V> V read(String name) { core.get(name) as V }
 	
-	override write(K name, V value) { core.put(name, value) }
+	override void write(String name, Object value) { core.put(name, value) }
 	
-	protected def Map<K, V> getCore() {	core }
+	protected def Map<String, Object> getCore() { core }
 	
 }

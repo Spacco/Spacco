@@ -14,9 +14,9 @@ import it.unibo.caterva.core.Field
 import it.unibo.caterva.core.DeviceUID
 import com.google.inject.Singleton
 import com.google.common.collect.Maps
-import it.unibo.caterva.core.CodePointGenerator
 import it.unibo.caterva.core.CodePoint
 import org.eclipse.xtend.lib.annotations.Data
+import it.unibo.caterva.core.Stack
 
 @Singleton
 final class Context implements AggregateSupport {
@@ -34,7 +34,7 @@ final class Context implements AggregateSupport {
 	
 	val DeviceUID device
 	val Comm comm
-	val CodePointGenerator stack
+	val Stack stack
 	var Set<DeviceUID> neighbors
 	val Map<CodePoint, Object> nbrs = new LinkedHashMap
 	var Map<CodePoint, Object> reps = new LinkedHashMap
@@ -42,7 +42,7 @@ final class Context implements AggregateSupport {
 	var Table<DeviceUID, CodePoint, Object> state
 
 	@Inject
-	new(DeviceUID d, Comm c, CodePointGenerator stack) {
+	new(DeviceUID d, Comm c, Stack stack) {
 		this.device = Objects.requireNonNull(d)
 		comm = Objects.requireNonNull(c)
 		this.stack = Objects.requireNonNull(stack)

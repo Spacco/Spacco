@@ -1,15 +1,15 @@
 package it.unibo.caterva.core.impl
 
 import it.unibo.caterva.core.CodePoint
-import it.unibo.caterva.core.CodePointGenerator
 import java.util.Arrays
 import java.util.Deque
 import java.util.LinkedList
 import org.apache.commons.math3.random.RandomGenerator
 import com.google.inject.Inject
 import org.eclipse.xtend.lib.annotations.Data
+import it.unibo.caterva.core.Stack
 
-class SimpleStack implements CodePointGenerator {
+class SimpleStack implements Stack {
 
 	static val SEED = 0x7f150540ed056752#L
 	static val SEQSTART = 0
