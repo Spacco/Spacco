@@ -23,7 +23,11 @@ final class Context implements AggregateSupport {
 	
 	@Data private static class RepToken {
 		val Class<?> funtype
-		override toString() {"REP_" + funtype.name.substring(funtype.name.lastIndexOf(".") + 1)}
+		override toString() { "REP_" + funtype.name.substring(funtype.name.lastIndexOf(".") + 1) }
+	}
+	@Data private static class Wrapper {
+		val Object wrapped
+		override toString() { '''w(«wrapped»)''' }
 	}
 	private static class NbrToken {
 		static val SINGLETON = new NbrToken
@@ -62,29 +66,26 @@ final class Context implements AggregateSupport {
 	}
 
 	override  <K> Field<K> neighbor(K x) {
-		val cp = stack.enterContext(NbrToken.SINGLETON)
-		if(nbrs.put(cp, x) !== null) {
-			throw new IllegalStateException('''Aligned cancellation at «cp
-				»: make sure you have not aligned twice on the same object at the same point in code''')
-		}
-		stack.exitContext
-		new Field(state.column(cp).filter[neighbors.contains($0)], device, x)
+		contextualizeAndRun(nbrs, NbrToken.SINGLETON, [
+			if(nbrs.put(it, x) !== null) {
+				throw new IllegalStateException('''Aligned cancellation at «it
+					»: make sure you have not aligned twice on the same object at the same point in code''')
+			}
+			new Field(state.column(it).filter[neighbors.contains($0)] as Map<DeviceUID, K>, device, x)
+		])
 	}
 
 	override <X> stateful(X x, (X)=>X f) {
-		val cp = stack.enterContext(new RepToken(f.class))
-		try {
-			val computed = f.apply((reps.get(cp) ?: x) as X)
-			if (newreps.put(cp, computed) !== null) {
-				throw new IllegalStateException('''State cancellation at «cp
+		contextualizeAndRun(newreps, new RepToken(f.class), [
+			val computed = f.apply((reps.get(it) ?: x) as X)
+			if (newreps.put(it, computed) !== null) {
+				throw new IllegalStateException('''State cancellation at «it
 					»: make sure you have not aligned twice on the same object at the same point in code''')
 			}
 			computed
-		} finally {
-			stack.exitContext
-		}
+		])
 	}
-
+	
 	override self() {
 		device
 	}
@@ -93,7 +94,7 @@ final class Context implements AggregateSupport {
 		newreps = Maps.newLinkedHashMapWithExpectedSize(newreps.size)
 		state = ImmutableTable.copyOf(comm.state)
 		neighbors = Objects.requireNonNull(state.rowKeySet)
-			.filter[!device.equals(it)]
+			.reject[device.equals(it)]
 			.toSet
 		nbrs.clear
 		val res = program.apply()
@@ -101,6 +102,23 @@ final class Context implements AggregateSupport {
 		reps = newreps
 		comm.shareState(Collections.unmodifiableMap(nbrs))
 		res
+	}
+
+	def private <X> X contextualizeAndRun(Map<CodePoint, Object> target, Object token, (CodePoint)=>X fun) {
+		val cp = stack.enterContext(token)
+		if (target.containsKey(cp)) {
+			/*
+			 * Aligned cancellation: artificially build a "all" structure.
+			 */
+			 stack.exitContext
+			 contextualizeAndRun(target, new Wrapper(token), fun)
+		} else {
+			try {
+				fun.apply(cp)
+			} finally {
+				stack.exitContext
+			}
+		}
 	}
 
 }
