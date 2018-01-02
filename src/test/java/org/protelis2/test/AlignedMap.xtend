@@ -21,7 +21,7 @@ class AlignedMap extends AbstractTest<Integer> {
 	
 	override apply() {
 		fc.stateful(1, [
-			minHoodWithSelf(align.alignedMap(fc.neighbor(it), [1], [v, k | v + 1]))
+			minHoodWithSelf(align.alignedMap(fc.neighbor(it), [1], [$0 + 1]))
 		])
 	}
 	
